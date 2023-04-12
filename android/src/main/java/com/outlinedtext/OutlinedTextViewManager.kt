@@ -1,10 +1,12 @@
 package com.outlinedtext
 
 import android.graphics.Color
+import android.os.Build
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
@@ -16,6 +18,7 @@ class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
     val text = OutlinedTextView(reactContext)
 
     text.gravity = Gravity.CENTER_HORIZONTAL
+    text.typeface = ResourcesCompat.getFont(reactContext, R.font.toilet_gaming)
 
     return text
   }
