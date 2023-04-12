@@ -22,7 +22,8 @@ class OutlinedTextView (
 
       setTextColor(this.outlineColor)
       paint.strokeWidth = this.outlineWidth
-      paint.style = Paint.Style.STROKE
+      paint.style = Paint.Style.FILL_AND_STROKE
+
       super.onDraw(canvas)
 
       setTextColor(Color.WHITE)

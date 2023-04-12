@@ -1,5 +1,8 @@
 # react-native-outlined-text
 
+> **Warning**
+> This is a work in progress. Use with caution.
+
 Text with outline/stroke
 
 ## Installation
@@ -11,11 +14,11 @@ npm install react-native-outlined-text
 ## Usage
 
 ```js
-import { OutlinedTextView } from "react-native-outlined-text";
+import { OutlinedTextView } from 'react-native-outlined-text';
 
 // ...
 
-<OutlinedTextView color="tomato" />
+<OutlinedTextView color="tomato" />;
 ```
 
 ## Contributing

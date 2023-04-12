@@ -17,6 +17,7 @@ type OutlinedTextProps = {
   outlineWidth?: number;
   text: string;
   textSize: number;
+  shadowWidth?: number;
 } & ViewProps;
 
 const ComponentName = 'OutlinedTextView';

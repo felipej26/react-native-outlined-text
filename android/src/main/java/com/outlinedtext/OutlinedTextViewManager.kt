@@ -18,7 +18,8 @@ class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
     val text = OutlinedTextView(reactContext)
 
     text.gravity = Gravity.CENTER_HORIZONTAL
-    text.typeface = ResourcesCompat.getFont(reactContext, R.font.toilet_gaming)
+    text.typeface = ResourcesCompat.getFont(reactContext, R.font.lilitaone_regular)
+    text.setShadowLayer(0.1F, 2F, 2F, Color.BLACK)
 
     return text
   }
@@ -31,6 +32,11 @@ class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
   @ReactProp(name = "textSize")
   fun setTextSize(outlinedText: OutlinedTextView, textSize: Float) {
     outlinedText.textSize = textSize
+  }
+
+  @ReactProp(name = "shadowWidth")
+  fun setShadowWidth(outlinedText: OutlinedTextView, shadowWidth: Float) {
+    outlinedText.setShadowLayer(0.1F, shadowWidth, shadowWidth, Color.BLACK)
   }
 
   @ReactProp(name = "outlineColor")

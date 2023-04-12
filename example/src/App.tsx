@@ -8,22 +8,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <OutlinedTextView
-        outlineColor="#FF0000"
-        outlineWidth={4}
-        textSize={20}
+        outlineWidth={10}
+        textSize={40}
+        shadowWidth={5}
         // eslint-disable-next-line react-native/no-inline-styles
         style={{
           position: 'absolute',
           backgroundColor: '#00FF00',
           width: '100%',
-          height: 30,
-          // padding: 10,
-          // alignContent: 'center',
-          // justifyContent: 'center',
-          // alignItems: 'center',
+          height: 200,
           alignSelf: 'center',
         }}
-        text={'T E S T E Roboto'}
+        text={'Play SETTINGS ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
       />
     </View>
   );
