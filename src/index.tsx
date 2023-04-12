@@ -1,8 +1,9 @@
 import {
-  requireNativeComponent,
-  UIManager,
+  ColorValue,
   Platform,
-  ViewStyle,
+  UIManager,
+  ViewProps,
+  requireNativeComponent,
 } from 'react-native';
 
 const LINKING_ERROR =
@@ -12,9 +13,11 @@ const LINKING_ERROR =
   '- You are not using Expo Go\n';
 
 type OutlinedTextProps = {
-  color: string;
-  style: ViewStyle;
-};
+  outlineColor?: ColorValue;
+  outlineWidth?: number;
+  text: string;
+  textSize: number;
+} & ViewProps;
 
 const ComponentName = 'OutlinedTextView';
 

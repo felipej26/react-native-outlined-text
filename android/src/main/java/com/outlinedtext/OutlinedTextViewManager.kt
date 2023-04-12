@@ -1,20 +1,42 @@
 package com.outlinedtext
 
 import android.graphics.Color
+import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 
-class OutlinedTextViewManager : SimpleViewManager<View>() {
+class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
   override fun getName() = "OutlinedTextView"
 
-  override fun createViewInstance(reactContext: ThemedReactContext): View {
-    return View(reactContext)
+  override fun createViewInstance(reactContext: ThemedReactContext): OutlinedTextView {
+    val text = OutlinedTextView(reactContext)
+
+    text.gravity = Gravity.CENTER_HORIZONTAL
+
+    return text
   }
 
-  @ReactProp(name = "color")
-  fun setColor(view: View, color: String) {
-    view.setBackgroundColor(Color.parseColor(color))
+  @ReactProp(name = "text")
+  fun setText(outlinedText: OutlinedTextView, text: String) {
+    outlinedText.text = text
+  }
+
+  @ReactProp(name = "textSize")
+  fun setTextSize(outlinedText: OutlinedTextView, textSize: Float) {
+    outlinedText.textSize = textSize
+  }
+
+  @ReactProp(name = "outlineColor")
+  fun setOutlineColor(outlinedText: OutlinedTextView, color: String?) {
+    outlinedText.setOutlineColor(Color.parseColor(color))
+  }
+
+  @ReactProp(name = "outlineWidth", defaultFloat = 2f)
+  fun setOutlineWidth(outlinedText: OutlinedTextView, width: Float) {
+    outlinedText.setOutlineWidth(width)
   }
 }
