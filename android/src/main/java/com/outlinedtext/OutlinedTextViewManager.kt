@@ -34,6 +34,15 @@ class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
     outlinedText.textSize = textSize
   }
 
+  @ReactProp(name = "isLeftAlign")
+  fun setIsLeftAlign(outlinedText: OutlinedTextView, isLeftAlign: Boolean) {
+    if (isLeftAlign) {
+      outlinedText.gravity = Gravity.START
+    } else {
+      outlinedText.gravity = Gravity.CENTER_HORIZONTAL
+    }
+  }
+
   @ReactProp(name = "shadowWidth")
   fun setShadowWidth(outlinedText: OutlinedTextView, shadowWidth: Float) {
     outlinedText.setShadowLayer(0.1F, shadowWidth, shadowWidth, Color.BLACK)
