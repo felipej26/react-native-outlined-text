@@ -329,7 +329,7 @@ PODS:
   - React-jsinspector (0.71.6)
   - React-logger (0.71.6):
     - glog
-  - react-native-outlined-text (0.3.0):
+  - react-native-outlined-text (0.5.0):
     - React-Core
   - React-perflogger (0.71.6)
   - React-RCTActionSheet (0.71.6):
@@ -606,7 +606,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 7894956638ff3e00819dd3f9f6f4a84da38f2409
   React-jsinspector: d5ce2ef3eb8fd30c28389d0bc577918c70821bd6
   React-logger: 9332c3e7b4ef007a0211c0a9868253aac3e1da82
-  react-native-outlined-text: de3b20838d3b03d6deebe6b58f8deeaa7804234f
+  react-native-outlined-text: c2cb7a1fc6806e39f15b18bf7c5d7aea212764b8
   React-perflogger: 43392072a5b867a504e2b4857606f8fc5a403d7f
   React-RCTActionSheet: c7b67c125bebeda9fb19fc7b200d85cb9d6899c4
   React-RCTAnimation: c2de79906f607986633a7114bee44854e4c7e2f5
@@ -626,4 +626,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c8206d801eb36dd10897e00fcedf32c51c1ce72b
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.14.3
