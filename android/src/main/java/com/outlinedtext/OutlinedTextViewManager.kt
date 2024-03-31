@@ -34,6 +34,11 @@ class OutlinedTextViewManager : SimpleViewManager<OutlinedTextView>() {
     outlinedText.textSize = textSize
   }
 
+  @ReactProp(name = "defaultTextColor")
+  fun setDefaultTextColor(outlinedText: OutlinedTextView, color: String?) {
+    outlinedText.setDefaultTextColor(Color.parseColor(color))
+  }
+
   @ReactProp(name = "isLeftAlign")
   fun setIsLeftAlign(outlinedText: OutlinedTextView, isLeftAlign: Boolean) {
     if (isLeftAlign) {

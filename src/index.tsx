@@ -1,8 +1,8 @@
 import {
-  ColorValue,
+  type ColorValue,
   Platform,
   UIManager,
-  ViewProps,
+  type ViewProps,
   requireNativeComponent,
 } from 'react-native';
 
@@ -14,6 +14,7 @@ const LINKING_ERROR =
 
 type OutlinedTextProps = {
   outlineColor?: ColorValue;
+  defaultTextColor?: ColorValue;
   outlineWidth?: number;
   text: string;
   textSize: number;

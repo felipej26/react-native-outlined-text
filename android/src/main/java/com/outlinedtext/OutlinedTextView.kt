@@ -13,10 +13,11 @@ class OutlinedTextView (
 
   private var isDrawing = false
 
+  private var defaultTextColor = Color.WHITE
   private var outlineColor = Color.BLACK
   private var outlineWidth = 0f
 
-  override fun onDraw(canvas: Canvas?) {
+  override fun onDraw(canvas: Canvas) {
     if (this.outlineWidth > 0) {
       this.isDrawing = true;
 
@@ -26,7 +27,7 @@ class OutlinedTextView (
 
       super.onDraw(canvas)
 
-      setTextColor(Color.WHITE)
+      setTextColor(this.defaultTextColor)
       paint.strokeWidth = 0F
       paint.style = Paint.Style.FILL
 
@@ -41,6 +42,11 @@ class OutlinedTextView (
       return
     }
     super.invalidate()
+  }
+
+  fun setDefaultTextColor(textColor: Int) {
+    this.defaultTextColor = textColor
+    this.invalidate()
   }
 
   fun setOutlineColor(outlineColor: Int) {
