@@ -8,18 +8,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <OutlinedTextView
+        defaultTextColor={'#00ddff'}
+        outlineColor={'#FF0000'}
         outlineWidth={10}
-        textSize={40}
         shadowWidth={5}
-        // eslint-disable-next-line react-native/no-inline-styles
-        style={{
-          position: 'absolute',
-          backgroundColor: '#00FF00',
-          width: '100%',
-          height: 200,
-          alignSelf: 'center',
-        }}
         text={'Play SETTINGS ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
+        textSize={40}
+        style={styles.innerText}
       />
     </View>
   );
@@ -31,5 +26,11 @@ const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: 'blue',
     flexDirection: 'row',
+  },
+  innerText: {
+    alignSelf: 'center',
+    backgroundColor: '#00FF00',
+    height: 200,
+    width: '100%',
   },
 });

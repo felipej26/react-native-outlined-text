@@ -1,16 +1,13 @@
+const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 const path = require('path');
 const escape = require('escape-string-regexp');
 const exclusionList = require('metro-config/src/defaults/exclusionList');
 const pak = require('../package.json');
 
 const root = path.resolve(__dirname, '..');
+const modules = Object.keys({ ...pak.peerDependencies });
 
-const modules = Object.keys({
-  ...pak.peerDependencies,
-});
-
-module.exports = {
-  projectRoot: __dirname,
+const config = {
   watchFolders: [root],
 
   // We need to make sure that only one version is loaded for peerDependencies
@@ -38,3 +35,5 @@ module.exports = {
     }),
   },
 };
+
+module.exports = mergeConfig(getDefaultConfig(__dirname), config);
